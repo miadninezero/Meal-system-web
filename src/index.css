@@ -1,0 +1,144 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: var(--theme-primary);
+  --color-on-primary: var(--theme-on-primary);
+  --color-primary-container: var(--theme-primary-container);
+  --color-on-primary-container: var(--theme-on-primary-container);
+
+  --color-secondary: var(--theme-secondary);
+  --color-on-secondary: var(--theme-on-secondary);
+  --color-secondary-container: var(--theme-secondary-container);
+  --color-on-secondary-container: var(--theme-on-secondary-container);
+
+  --color-tertiary: var(--theme-tertiary);
+  --color-on-tertiary: var(--theme-on-tertiary);
+  --color-tertiary-container: var(--theme-tertiary-container);
+  --color-on-tertiary-container: var(--theme-on-tertiary-container);
+
+  --color-background: var(--theme-background);
+  --color-on-background: var(--theme-on-background);
+  --color-surface: var(--theme-surface);
+  --color-surface-low: var(--theme-surface-low);
+  --color-on-surface: var(--theme-on-surface);
+  --color-surface-variant: var(--theme-surface-variant);
+  --color-on-surface-variant: var(--theme-on-surface-variant);
+  --color-outline: var(--theme-outline);
+  --color-outline-variant: var(--theme-outline-variant);
+
+  --color-error: var(--theme-error);
+  --color-on-error: var(--theme-on-error);
+  --color-error-container: var(--theme-error-container);
+  --color-on-error-container: var(--theme-on-error-container);
+
+  --font-sans: "Plus Jakarta Sans", ui-sans-serif, system-ui, -apple-system, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+}
+
+:root {
+  --theme-primary: #C05621;
+  --theme-on-primary: #FFFFFF;
+  --theme-primary-container: #FFDBCF;
+  --theme-on-primary-container: #381400;
+
+  --theme-secondary: #0D7351;
+  --theme-on-secondary: #FFFFFF;
+  --theme-secondary-container: #A5F2D2;
+  --theme-on-secondary-container: #002115;
+
+  --theme-tertiary: #2C5E8A;
+  --theme-on-tertiary: #FFFFFF;
+  --theme-tertiary-container: #CEE5FF;
+  --theme-on-tertiary-container: #001D33;
+
+  --theme-background: #FCFAF7;
+  --theme-on-background: #201A17;
+  --theme-surface: #FFFFFF;
+  --theme-surface-low: #F8F3EE;
+  --theme-on-surface: #201A17;
+  --theme-surface-variant: #F4DFD7;
+  --theme-on-surface-variant: #52443E;
+  --theme-outline: #85736D;
+  --theme-outline-variant: #D7C3BC;
+
+  --theme-error: #BA1A1A;
+  --theme-on-error: #FFFFFF;
+  --theme-error-container: #FFDAD6;
+  --theme-on-error-container: #410002;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --theme-primary: #FFB59A;
+    --theme-on-primary: #5F1B00;
+    --theme-primary-container: #842B00;
+    --theme-on-primary-container: #FFDBCF;
+
+    --theme-secondary: #89D6B7;
+    --theme-on-secondary: #003825;
+    --theme-secondary-container: #005238;
+    --theme-on-secondary-container: #A5F2D2;
+
+    --theme-tertiary: #98CBFA;
+    --theme-on-tertiary: #003353;
+    --theme-tertiary-container: #0D486F;
+    --theme-on-tertiary-container: #CEE5FF;
+
+    --theme-background: #171210;
+    --theme-on-background: #EDE0DB;
+    --theme-surface: #201A17;
+    --theme-surface-low: #27201C;
+    --theme-on-surface: #EDE0DB;
+    --theme-surface-variant: #52443E;
+    --theme-on-surface-variant: #D7C3BC;
+    --theme-outline: #A08C86;
+    --theme-outline-variant: #52443E;
+
+    --theme-error: #FFB4AB;
+    --theme-on-error: #690005;
+    --theme-error-container: #93000A;
+    --theme-on-error-container: #FFDAD6;
+  }
+}
+
+:root[data-theme="dark"] {
+  --theme-primary: #FFB59A;
+  --theme-on-primary: #5F1B00;
+  --theme-primary-container: #842B00;
+  --theme-on-primary-container: #FFDBCF;
+
+  --theme-secondary: #89D6B7;
+  --theme-on-secondary: #003825;
+  --theme-secondary-container: #005238;
+  --theme-on-secondary-container: #A5F2D2;
+
+  --theme-tertiary: #98CBFA;
+  --theme-on-tertiary: #003353;
+  --theme-tertiary-container: #0D486F;
+  --theme-on-tertiary-container: #CEE5FF;
+
+  --theme-background: #171210;
+  --theme-on-background: #EDE0DB;
+  --theme-surface: #201A17;
+  --theme-surface-low: #27201C;
+  --theme-on-surface: #EDE0DB;
+  --theme-surface-variant: #52443E;
+  --theme-on-surface-variant: #D7C3BC;
+  --theme-outline: #A08C86;
+  --theme-outline-variant: #52443E;
+
+  --theme-error: #FFB4AB;
+  --theme-on-error: #690005;
+  --theme-error-container: #93000A;
+  --theme-on-error-container: #FFDAD6;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--theme-background);
+  color: var(--theme-on-background);
+}
+
+.tabular-nums {
+  font-variant-numeric: tabular-nums;
+}
